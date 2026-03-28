@@ -34,8 +34,8 @@ model User{
 // product
 model Like { // joined table between Product and Users
   id                  Int           @id @default(autoincrement())
-  like_count          Int 
-  user_id             Int
+  like_count          Int           
+  user_id             Int            
   users               User           @relation(fields: [user_id],references: [id])
   product_id          Int
   products            Product         @relation(fields: [product_id],references: [id])
